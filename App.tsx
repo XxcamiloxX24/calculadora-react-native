@@ -11,15 +11,15 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value ={theme}>
-    <View style={theme === 'light' ? styles.container : [styles.container, {backgroundColor: '#000'}]}>
-      <Text style={theme === 'light' ? estiloLetra.ejemplo : [estiloLetra.ejemplo, {color: mycolors.white}]}>aprendiendo</Text>
-      <StatusBar style="auto" />
-      <Switch value ={theme === 'light'} onValueChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-      />
+      <View style={theme === 'light' ? styles.container : [styles.container, {backgroundColor: '#000'}]}>
+        <Text style={theme === 'light' ? estiloLetra.ejemplo : [estiloLetra.ejemplo, {color: mycolors.white}]}>aprendiendo</Text>
+        <StatusBar style="auto" />
+        <Switch value ={theme === 'light'} onValueChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+        />
 
-      <MyKeyboard />
-      
-    </View>
+        <MyKeyboard />
+        
+      </View>
     </ThemeContext.Provider>
   );
 }
