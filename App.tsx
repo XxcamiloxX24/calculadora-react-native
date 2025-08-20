@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Switch} from 'react-native';
 import { ThemeContext } from './src/context/ThemeContext';
 import { mycolors } from './src/style/colores';
 import Button from './src/components/Button';
+import MyKeyboard from './src/components/MyKeyboard';
 
 export default function App() {
   const [theme, setTheme] = useState('light');
@@ -12,11 +13,12 @@ export default function App() {
     <ThemeContext.Provider value ={theme}>
     <View style={theme === 'light' ? styles.container : [styles.container, {backgroundColor: '#000'}]}>
       <Text style={theme === 'light' ? estiloLetra.ejemplo : [estiloLetra.ejemplo, {color: mycolors.white}]}>aprendiendo</Text>
-      <Text style={theme === 'light' ? estiloLetra.ejemplo : [estiloLetra.ejemplo, {color: mycolors.white}]}>aprendiendo</Text>
       <StatusBar style="auto" />
       <Switch value ={theme === 'light'} onValueChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       />
-      <Button isBlue title='3' onPress={() => {alert('hello')}} />
+
+      <MyKeyboard />
+      
     </View>
     </ThemeContext.Provider>
   );
@@ -27,7 +29,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: mycolors.light,
     alignItems: 'center',
-    color: mycolors.white,
     justifyContent: 'center',
   },
 });
