@@ -24,7 +24,7 @@ export const Styles = StyleSheet.create({
         width: 72,
         height: 72,
         borderRadius: 24,
-        backgroundColor: mycolors.white,
+        backgroundColor: mycolors.btnGray,
         justifyContent: "center",
         alignItems: "center",
         margin: 8,
